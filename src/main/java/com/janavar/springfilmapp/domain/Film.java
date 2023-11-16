@@ -38,7 +38,7 @@ public class Film {
     @Column(nullable = false, length = 20)
     private String producer;
 
-    @NotBlank(message = "Film adi bos olamaz!")
+    @NotBlank(message = "Film turu bos olamaz!")
     @Size(min = 2, max = 25, message = "Filmin turu '${validatedValue}' {min} ve {max} arasinda olmali!")
     @Column(nullable = false, length = 25)
     private String genre;
