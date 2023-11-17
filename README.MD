@@ -1,10 +1,14 @@
 # Spring Boot Film Projesi
-Bu proje, Spring Boot kullanarak basit bir film bilgisi yönetim uygulamasını oluşturmayı amaçlamaktadır. Proje, tek bir POJO sınıfı içerir. CRUD (Create, Read, Update, Delete) operasyonları uygulanmıştır.
+
+Bu proje, Spring Boot kullanarak basit bir film bilgisi yönetim uygulamasını oluşturmayı amaçlamaktadır. Proje, tek bir
+POJO sınıfı içerir. CRUD (Create, Read, Update, Delete) operasyonları uygulanmıştır.
 
 ## Bağımlılıklar
+
 ![spring_init](spring_init.png)
 
 ## Film Sınıfı
+
 Bu sınıfın nitelikleri aşağıdaki gibidir.
 
 * `id` : **Long** türünde filmin benzersiz idsi.
@@ -15,6 +19,7 @@ Bu sınıfın nitelikleri aşağıdaki gibidir.
 * `genre` : **String** Filmin türü.
 
 ## FilmService
+
 CRUD operasyonlarını gerçekleştiren bir servis sınıfıdır.
 
 ## FilmController
@@ -22,7 +27,9 @@ CRUD operasyonlarını gerçekleştiren bir servis sınıfıdır.
 HTTP isteklerini karşılayan bir kontrolör sınıfıdır. FilmService'i kullanarak CRUD operasyonlarını çağırır.
 
 ## FilmRepository
-FilmRepository, film nesnelerini depolamak ve çeşitli veritabanı işlemlerini gerçekleştirmek için kullanılır. Bu repository, Spring Data JPA tarafından sağlanan özellikleri kullanarak veritabanı ile etkileşimde bulunur.
+
+FilmRepository, film nesnelerini depolamak ve çeşitli veritabanı işlemlerini gerçekleştirmek için kullanılır. Bu
+repository, Spring Data JPA tarafından sağlanan özellikleri kullanarak veritabanı ile etkileşimde bulunur.
 
 ## API Endpoint'leri
 
@@ -54,11 +61,45 @@ FilmRepository, film nesnelerini depolamak ve çeşitli veritabanı işlemlerini
 ### Örnek JSON
 
 ```
-{
-  "filmName": "Interstellar",
-  "releaseYear": "2014",
-  "imdbRating": 8.6,
-  "producer": "Christopher Nolan",
-  "genre": "Science Fiction"
-}
+[
+  {
+    "filmName": "Interstellar",
+    "releaseYear": "2014",
+    "imdbRating": 8.6,
+    "producer": "Christopher Nolan",
+    "genre": "Science Fiction"
+  },
+  {
+  "filmName": "The Shawshank Redemption",
+  "releaseYear": "1994",
+  "imdbRating": 9.3,
+  "producer": "Frank Darabont",
+  "genre": "Drama",
+  "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/27/The_Shawshank_Redemption_film_poster.jpg/220px-The_Shawshank_Redemption_film_poster.jpg"
+  },
+  {
+    "filmName": "Inception",
+    "releaseYear": "2010",
+    "imdbRating": 8.8,
+    "producer": "Christopher Nolan",
+    "genre": "Action, Adventure, Sci-Fi"
+  },
+  {
+  "filmName": "The Godfather",
+  "releaseYear": "1972",
+  "imdbRating": 9.2,
+  "producer": "Francis Ford Coppola",
+  "genre": "Crime",
+  "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/The_Godfather_film_poster.jpg/220px-The_Godfather_film_poster.jpg"
+  },
+  {
+    "filmName": "The Shawshank Redemption",
+    "releaseYear": "1994",
+    "imdbRating": 9.3,
+    "producer": "Frank Darabont",
+    "genre": "Drama"
+  }
+]
+
+
 ```

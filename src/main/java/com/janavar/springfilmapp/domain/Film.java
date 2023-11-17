@@ -25,10 +25,7 @@ public class Film {
     private String filmName;
 
     @NotBlank(message = "Film yili bos olamaz!")
-    // TODO : 4 KARAKTER AYARI Json format arastir
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy")
-    @Size(min = 3, max = 5, message = "Yapim yili'${validatedValue}' {min} ve {max} arasinda olmali!")
-    @Column(length = 5)
     private String releaseYear;
 
     private Double imdbRating;
