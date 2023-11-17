@@ -22,8 +22,8 @@ public class FilmController {
 
     // !!! Get All Films
     @GetMapping //http://localhost:8080/films + GET
-    public ResponseEntity<List<Film>> listAllFilms(){
-        List<Film> films =filmService.getAllFilms();
+    public ResponseEntity<List<Film>> listAllFilms() {
+        List<Film> films = filmService.getAllFilms();
 
         return ResponseEntity.ok(films);
         //return new ResponseEntity<>(films, HttpStatus.OK);
@@ -31,20 +31,18 @@ public class FilmController {
 
     // !!! CREATE a new Film
     @PostMapping //http://localhost:8080/films + POST + JSON
-    public ResponseEntity<Map<String,String>> createFilm(@Valid @RequestBody Film film){
+    public ResponseEntity<Map<String, String>> createFilm(@Valid @RequestBody Film film) {
         filmService.createNewFilm(film);
-        Map<String,String> map=new HashMap<>();
-        map.put("message","Film basariyla eklendi");
+        Map<String, String> map = new HashMap<>();
+        map.put("message", "Film basariyla eklendi");
         map.put("status", "true");
-        map.put("Deneme", "Deneme2");
         //HttpStatus Code = 201
-        return new ResponseEntity<>(map,HttpStatus.CREATED);
+        return new ResponseEntity<>(map, HttpStatus.CREATED);
     }
 
     // !!! GET a Film
     @GetMapping("/{id}") //http://localhost:8080/films/1 + GET
-    public ResponseEntity<Film> getFilmById(@PathVariable("id") Long id){
-
+    public ResponseEntity<Film> getFilmById(@PathVariable("id") Long id) {
         return ResponseEntity.ok(filmService.findFilm(id));
     }
 
@@ -53,8 +51,6 @@ public class FilmController {
 
 
     // !!! UPDATE Film
-
-
 
 
 }

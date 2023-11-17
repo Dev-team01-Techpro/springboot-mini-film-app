@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Film Ekle</title>
+</head>
+<body>
+    <header>
+        <img src="./janavarlar-logo.png" alt="Film Uygulaması Logo" class="logo">
+    </header>
+    <nav>
+        <a href="index.html">Film Ekle</a>
+        <a href="films.html">Film Listele</a>
+    </nav>
+    <div class="container">
+        <h1>Film Ekle</h1>
+        <form id="filmForm">
+            <label for="filmName">Film Adı:</label>
+            <input type="text" id="filmName" required>
+            
+            <label for="releaseYear">Yapım Yılı:</label>
+            <input type="text" id="releaseYear" pattern="\d{4}" required>
+            
+            <label for="imdbRating">IMDb Puanı:</label>
+            <input type="number" id="imdbRating" step="0.1" required>
+            
+            <label for="producer">Yapımcı:</label>
+            <input type="text" id="producer" required>
+            
+            <label for="genre">Film Türü:</label>
+            <input type="text" id="genre" required>
+            
+            <button type="submit" onclick="addFilm()">Film Ekle</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

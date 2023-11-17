@@ -74,8 +74,7 @@ repository, Spring Data JPA tarafından sağlanan özellikleri kullanarak verita
   "releaseYear": "1994",
   "imdbRating": 9.3,
   "producer": "Frank Darabont",
-  "genre": "Drama",
-  "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/27/The_Shawshank_Redemption_film_poster.jpg/220px-The_Shawshank_Redemption_film_poster.jpg"
+  "genre": "Drama"
   },
   {
     "filmName": "Inception",
@@ -89,8 +88,7 @@ repository, Spring Data JPA tarafından sağlanan özellikleri kullanarak verita
   "releaseYear": "1972",
   "imdbRating": 9.2,
   "producer": "Francis Ford Coppola",
-  "genre": "Crime",
-  "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/The_Godfather_film_poster.jpg/220px-The_Godfather_film_poster.jpg"
+  "genre": "Crime"
   },
   {
     "filmName": "The Shawshank Redemption",

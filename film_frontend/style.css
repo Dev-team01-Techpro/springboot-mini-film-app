@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    background-color: #222;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Dark background color */
+    padding: 0.5em 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(221, 221, 5);
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #333; /* Dark background color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Light shadow */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input {
+    width: calc(100% - 16px); /* Sol ve sağ boşlukları eşitle */
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #444; /* Dark input background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    outline: none; /* Remove the focus border */
+}
+
+button {
+    background-color: rgb(230, 28, 61);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top:5px;
+}
+
+button:hover {
+    background-color: rgba(230, 28, 61,90%);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(230, 28, 61);
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#filmDetail {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.logo {
+    max-width: 200px; /* Maksimum genişlik */
+    height: auto; /* Otomatik yükseklik ayarı */
+    margin-right: 10px; /* Logo ile başlık arasında sağ boşluk */
+}

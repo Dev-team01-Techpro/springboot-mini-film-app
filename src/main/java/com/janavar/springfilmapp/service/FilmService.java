@@ -6,7 +6,6 @@ import com.janavar.springfilmapp.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.ReadOnlyFileSystemException;
 import java.util.List;
 
 @Service
@@ -28,8 +27,7 @@ public class FilmService {
 
     // Not : CREATE a new Film
     public Film findFilm(Long id) {
-
-        return filmRepository.findById(id).orElseThrow(()->
+        return filmRepository.findById(id).orElseThrow(() ->
                 new ResourceNotFoundException(id + "numaralı film bulunamadı.."));
     }
 
@@ -40,8 +38,6 @@ public class FilmService {
 
 
     // Not : UPDATE Film
-
-
 
 
 }
