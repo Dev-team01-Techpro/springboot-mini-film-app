@@ -41,9 +41,12 @@ public class FilmController {
         return new ResponseEntity<>(map,HttpStatus.CREATED);
     }
 
+    // !!! GET a Film
+    @GetMapping("/{id}") //http://localhost:8080/films/1 + GET
+    public ResponseEntity<Film> getFilmById(@PathVariable("id") Long id){
 
-
-    // !!! GET a new Film
+        return ResponseEntity.ok(filmService.findFilm(id));
+    }
 
 
     // !!! DELETE Film
