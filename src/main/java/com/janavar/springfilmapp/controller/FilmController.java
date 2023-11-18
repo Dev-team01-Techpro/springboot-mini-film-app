@@ -1,6 +1,7 @@
 package com.janavar.springfilmapp.controller;
 
 import com.janavar.springfilmapp.domain.Film;
+import com.janavar.springfilmapp.dto.FilmDTO;
 import com.janavar.springfilmapp.service.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -59,5 +60,13 @@ public class FilmController {
 
     // !!! UPDATE Film
 
+    @PutMapping("/{id}")  ////http://localhost:8080/films/1 + PUT + JSON
+    public ResponseEntity<String> updateFilm (@PathVariable ("id") Long id , @Valid @RequestBody FilmDTO filmDTO){
+        filmService.updateFilm(id, filmDTO);
+
+        String message = "Film başarıyla güncellendi.";
+        return new ResponseEntity<>(message,HttpStatus.OK);//200
+
+    }
 
 }
