@@ -7,6 +7,9 @@ POJO sınıfı içerir. CRUD (Create, Read, Update, Delete) operasyonları uygul
 
 ![spring_init](spring_init.png)
 
+## UML Diagramı
+![UML Diagram](UMLDiagram.png)
+
 ## Film Sınıfı
 
 Bu sınıfın nitelikleri aşağıdaki gibidir.

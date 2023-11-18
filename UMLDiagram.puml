@@ -1,0 +1,47 @@
+@startuml
+class com.janavar.springfilmapp.exception.ResourceNotFoundException {
++ <<Create>> ResourceNotFoundException(String)
+}
+interface com.janavar.springfilmapp.repository.FilmRepository {
+}
+class com.janavar.springfilmapp.SpringfilmappApplication {
++ {static} void main(String[])
+}
+class com.janavar.springfilmapp.controller.FilmController {
+- FilmService filmService
++ ResponseEntity<List<Film>> listAllFilms()
++ ResponseEntity<Map<String,String>> createFilm(Film)
++ ResponseEntity<Film> getFilmById(Long)
++ ResponseEntity<String> deleteFilm(Long)
++ ResponseEntity<String> updateFilm(Long,FilmDTO)
+}
+class com.janavar.springfilmapp.domain.Film {
+- Long id
+- String filmName
+- String releaseYear
+- Double imdbRating
+- String producer
+- String genre
+}
+class com.janavar.springfilmapp.dto.FilmDTO {
+- Long id
+- String filmName
+- String releaseYear
+- Double imdbRating
+- String producer
+- String genre
++ <<Create>> FilmDTO(Film)
+}
+class com.janavar.springfilmapp.service.FilmService {
+- FilmRepository filmRepository
++ List<Film> getAllFilms()
++ void createNewFilm(Film)
++ Film findFilm(Long)
++ void deleteFilm(Long)
++ void updateFilm(Long,FilmDTO)
+}
+
+
+com.janavar.springfilmapp.exception.RuntimeException <|-- com.janavar.springfilmapp.exception.ResourceNotFoundException
+org.springframework.data.jpa.repository.JpaRepository <|-- com.janavar.springfilmapp.repository.FilmRepository
+@enduml
