@@ -31,6 +31,12 @@ public class FilmService {
                 new ResourceNotFoundException(id + "numaralı film bulunamadı.."));
     }
 
+    public void deleteFilm(Long id) {
+        Film film=findFilm(id);
+        filmRepository.delete(film);
+
+    }
+
     // Not : GET a Film
 
 

@@ -46,9 +46,16 @@ public class FilmController {
         return ResponseEntity.ok(filmService.findFilm(id));
     }
 
-
     // !!! DELETE Film
 
+    @DeleteMapping("/{id}")//http://localhost:8080/films/1 + DELETE
+    public ResponseEntity<String> deleteFilm (@PathVariable("id") Long id)
+    {
+        filmService.deleteFilm(id);
+
+        String message = "Film başarıyla silindi.";
+        return new ResponseEntity<>(message,HttpStatus.OK);//200
+    }
 
     // !!! UPDATE Film
 
