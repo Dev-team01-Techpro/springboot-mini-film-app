@@ -10,7 +10,6 @@ public class SpringfilmappApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringfilmappApplication.class, args);
 		Film film = new Film();
-
 	}
 
 }

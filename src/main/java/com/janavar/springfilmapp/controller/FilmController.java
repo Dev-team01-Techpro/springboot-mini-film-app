@@ -25,7 +25,6 @@ public class FilmController {
     @GetMapping //http://localhost:8080/films + GET
     public ResponseEntity<List<Film>> listAllFilms() {
         List<Film> films = filmService.getAllFilms();
-
         return ResponseEntity.ok(films);
         //return new ResponseEntity<>(films, HttpStatus.OK);
     }
@@ -48,25 +47,19 @@ public class FilmController {
     }
 
     // !!! DELETE Film
-
     @DeleteMapping("/{id}")//http://localhost:8080/films/1 + DELETE
-    public ResponseEntity<String> deleteFilm (@PathVariable("id") Long id)
-    {
+    public ResponseEntity<String> deleteFilm(@PathVariable("id") Long id) {
         filmService.deleteFilm(id);
-
         String message = "Film başarıyla silindi.";
-        return new ResponseEntity<>(message,HttpStatus.OK);//200
+        return new ResponseEntity<>(message, HttpStatus.OK);//200
     }
 
     // !!! UPDATE Film
-
     @PutMapping("/{id}")  ////http://localhost:8080/films/1 + PUT + JSON
-    public ResponseEntity<String> updateFilm (@PathVariable ("id") Long id , @Valid @RequestBody FilmDTO filmDTO){
+    public ResponseEntity<String> updateFilm(@PathVariable("id") Long id, @Valid @RequestBody FilmDTO filmDTO) {
         filmService.updateFilm(id, filmDTO);
-
         String message = "Film başarıyla güncellendi.";
-        return new ResponseEntity<>(message,HttpStatus.OK);//200
-
+        return new ResponseEntity<>(message, HttpStatus.OK);//200
     }
 
 }

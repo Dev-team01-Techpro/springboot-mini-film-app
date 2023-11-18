@@ -25,21 +25,21 @@ public class FilmService {
         filmRepository.save(film);
     }
 
-
     // Not : GET a Film
     public Film findFilm(Long id) {
         return filmRepository.findById(id).orElseThrow(() ->
                 new ResourceNotFoundException(id + "numaralı film bulunamadı.."));
     }
+
     // Not : DELETE Film
     public void deleteFilm(Long id) {
-        Film film=findFilm(id);
+        Film film = findFilm(id);
         filmRepository.delete(film);
-
     }
+
     // Not : UPDATE Film
     public void updateFilm(Long id, FilmDTO filmDTO) {
-        Film film =findFilm(id);
+        Film film = findFilm(id);
         film.setFilmName(filmDTO.getFilmName());
         film.setReleaseYear(filmDTO.getReleaseYear());
         film.setImdbRating(filmDTO.getImdbRating());
@@ -47,15 +47,5 @@ public class FilmService {
         film.setGenre(filmDTO.getGenre());
 
         filmRepository.save(film);
-
     }
-
-
-
-
-
-
-
-
-
 }
