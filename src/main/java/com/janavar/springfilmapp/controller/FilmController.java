@@ -40,6 +40,17 @@ public class FilmController {
         return new ResponseEntity<>(map, HttpStatus.CREATED);
     }
 
+    // !!! CREATE new Films
+    @PostMapping("/films") //http://localhost:8080/films + POST + JSON
+    public ResponseEntity<Map<String, String>> createFilms(@Valid @RequestBody List<Film> films) {
+        filmService.createNewFilms(films);
+        Map<String, String> map = new HashMap<>();
+        map.put("message", "Filmler basariyla eklendi");
+        map.put("status", "true");
+        //HttpStatus Code = 201
+        return new ResponseEntity<>(map, HttpStatus.CREATED);
+    }
+
     // !!! GET a Film
     @GetMapping("/{id}") //http://localhost:8080/films/1 + GET
     public ResponseEntity<Film> getFilmById(@PathVariable("id") Long id) {

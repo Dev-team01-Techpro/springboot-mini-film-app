@@ -50,6 +50,11 @@ repository, Spring Data JPA tarafından sağlanan özellikleri kullanarak verita
     - Path: /films
     - Method: POST
     - Açıklama: Yeni bir film ekler.
+  
+- Film Listesi Ekleme:
+  - Path: /films/films
+  - Method: POST
+  - Açıklama: Yeni filmler ekler.
 
 - Film Güncelleme:
     - Path: /films/{filmId}

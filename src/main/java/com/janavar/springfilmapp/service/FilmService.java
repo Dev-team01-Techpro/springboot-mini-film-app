@@ -48,4 +48,12 @@ public class FilmService {
 
         filmRepository.save(film);
     }
+
+    // Not : CREATE  Films
+    public void createNewFilms(List<Film> films) {
+        for (Film film: films) {
+            filmRepository.save(film);
+        }
+
+    }
 }
